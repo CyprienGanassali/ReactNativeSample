@@ -1,6 +1,8 @@
-import React from "react";
-import { View, StyleSheet, Text, Image, Animated } from "react-native";
-import { withTheme } from "react-native-paper";
+import React from 'react';
+import {
+  View, StyleSheet, Text, Image, Animated,
+} from 'react-native';
+import { withTheme } from 'react-native-paper';
 
 class SplashScreen extends React.Component {
   constructor(props) {
@@ -12,9 +14,9 @@ class SplashScreen extends React.Component {
   componentDidMount() {
     Animated.timing(this.state.fadeAnim, {
       toValue: 1,
-      duration: 5000
+      duration: 5000,
     }).start(() => {
-      this.navigation.replace("GalleryScreen"); // We remove SplashScreen from stack
+      this.navigation.replace('GalleryScreen'); // We remove SplashScreen from stack
     });
   }
 
@@ -29,7 +31,7 @@ class SplashScreen extends React.Component {
             style={[styles.animated_view, { opacity: this.state.fadeAnim }]}
           >
             <Image
-              source={require("./images/logo.png")}
+              source={require('./images/logo.png')}
               style={styles.logo}
               resizeMode="contain"
             />
@@ -43,35 +45,35 @@ class SplashScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   top: {
-    flex: 1
+    flex: 1,
   },
   bottom: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: 'white',
   },
   animated_view_container: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 20 // Based on title font size
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20, // Based on title font size
   },
   logo: {
     width: 150,
     height: 150,
-    alignSelf: "center"
+    alignSelf: 'center',
   },
   title: {
     marginTop: 5,
-    fontWeight: "bold",
-    fontSize: 20
-  }
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
 });
 
 export default withTheme(SplashScreen);

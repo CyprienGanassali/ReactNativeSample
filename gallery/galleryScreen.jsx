@@ -16,7 +16,7 @@ class GalleryScreen extends React.Component {
   }
 
   _loadPictures() {
-    if (this.state.isLoading == false) {
+    if (this.state.isLoading === false) {
       this.setState({ isLoading: true }, () => {
         getLastSevenAstronomyPicturesOfTheDay(this.state.startDate).then(
           data => {

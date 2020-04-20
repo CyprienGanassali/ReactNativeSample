@@ -22,6 +22,6 @@
       "package": "com.cganassali.apod",
       "versionCode": 1
     },
-    "entryPoint": "./main.js"
+    "entryPoint": "./main.jsx"
   }
 }

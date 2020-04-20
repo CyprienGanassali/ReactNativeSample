@@ -1,12 +1,12 @@
-import "react-native-gesture-handler";
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import GalleryScreen from "./gallery/galleryScreen";
-import SplashScreen from "./splash/splashScreen";
-import PictureScreen from "./picture/pictureScreen";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { withTheme } from "react-native-paper";
+import 'react-native-gesture-handler';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { withTheme } from 'react-native-paper';
+import GalleryScreen from './gallery/galleryScreen';
+import SplashScreen from './splash/splashScreen';
+import PictureScreen from './picture/pictureScreen';
 
 const Stack = createStackNavigator();
 
@@ -44,34 +44,34 @@ class App extends React.Component {
           initialRouteName="SplashScreen"
           screenOptions={{
             headerStyle: {
-              backgroundColor: colors.primary
+              backgroundColor: colors.primary,
             },
-            headerTintColor: "white",
+            headerTintColor: 'white',
             headerTitleStyle: {
-              fontWeight: "bold"
+              fontWeight: 'bold',
             },
-            headerTitleAlign: "center"
+            headerTitleAlign: 'center',
           }}
         >
           <Stack.Screen
             name="SplashScreen"
             component={this.SplashScreen}
             options={{
-              headerShown: false
+              headerShown: false,
             }}
           />
           <Stack.Screen
             name="GalleryScreen"
             component={this.GalleryScreen}
             options={{
-              title: "Galerie"
+              title: 'Galerie',
             }}
           />
           <Stack.Screen
             name="PictureScreen"
             component={this.PictureScreen}
             options={{
-              headerShown: false
+              headerShown: false,
             }}
           />
         </Stack.Navigator>
@@ -84,6 +84,6 @@ export default withTheme(App);
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
